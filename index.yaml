@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   generic:
   - apiVersion: v2
+    appVersion: 0.1.3
+    created: "2025-05-11T00:39:24.725614293Z"
+    description: A generic Helm chart for Kubernetes
+    digest: ff4d97786d98853cf4124d05dac1d06d2596748e1551fd7ff87077694aefb61f
+    name: generic
+    type: application
+    urls:
+    - https://github.com/applicaset/helm/releases/download/generic-0.1.3/generic-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.1.2
     created: "2025-05-11T00:27:09.014730351Z"
     description: A generic Helm chart for Kubernetes
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/applicaset/helm/releases/download/generic-0.1.1/generic-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-11T00:27:09.014738436Z"
+generated: "2025-05-11T00:39:24.725631505Z"
