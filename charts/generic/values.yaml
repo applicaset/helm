@@ -103,6 +103,30 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+## Array with environment variables to add to the main container
+## e.g:
+## envVars:
+##   - name: FOO
+##     value: "bar"
+##
+envVars: []
+
+## Array of existing ConfigMap containing extra env vars for the main container
+## e.g:
+## envFrom:
+##   - configMapRef:
+##     name: test-secret
+##
+envVarsCM: []
+
+## Array of existing Secret containing extra env vars for the main container
+## e.g:
+## envFrom:
+##   - secretRef:
+##     name: test-secret
+##
+envVarsSecret: []
+
 # Additional volumes on the output Deployment definition.
 volumes: []
 # - name: foo

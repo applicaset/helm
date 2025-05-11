@@ -46,7 +46,20 @@ spec:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.envVars }}
+          env:
+            {{- toYaml .Values.envVars | nindent 12 }}
+          {{- end }}
+          {{- if or .Values.envVarsCM .Values.envVarsSecret }}
+          envFrom:
+            {{- if .Values.envVarsCM }}
+            {{- toYaml .Values.envVarsCM | nindent 12 }}
+            {{- end }}
+            {{- if .Values.envVarsSecret }}
+            {{- toYaml .Values.envVarsSecret | nindent 12 }}
+            {{- end }}
           {{- with .Values.volumeMounts }}
+          {{- end }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
